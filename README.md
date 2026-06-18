@@ -22,3 +22,19 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Screenshot check
+
+The repository includes a Playwright screenshot smoke test that targets the Vite dev server and writes `screenshots/pricepilot-home.png`. It first uses a local Chrome/Chromium executable when one is available, which avoids relying on Playwright CDN browser downloads in restricted environments.
+
+```bash
+npm run dev
+# in another shell
+npm run screenshot
+```
+
+If your machine does not already have Chrome or Chromium, install Playwright's managed browser once:
+
+```bash
+npx playwright install chromium
+```
